@@ -672,6 +672,117 @@ img {
     font-weight: 300;
 }
 
+/* ---- ADDITIONAL CREDITS ---- */
+#credits {
+    padding: var(--section-pad) var(--side-pad);
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.credits-table {
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.credits-header-row {
+    display: grid;
+    grid-template-columns: 1.2fr 1.2fr 2.5fr 0.5fr;
+    gap: 16px;
+    padding: 14px 24px;
+    background: var(--bg-elevated);
+    border-bottom: 1px solid var(--border);
+}
+
+.credits-header-row span {
+    font-family: var(--font-mono);
+    font-size: 0.65rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--purple-light);
+}
+
+.credit-row {
+    display: grid;
+    grid-template-columns: 1.2fr 1.2fr 2.5fr 0.5fr;
+    gap: 16px;
+    padding: 16px 24px;
+    border-bottom: 1px solid var(--border);
+    align-items: start;
+    transition: background 0.2s;
+}
+
+.credit-row:last-child {
+    border-bottom: none;
+}
+
+.credit-row:hover {
+    background: var(--bg-surface);
+}
+
+.credit-row .credits-col-name {
+    font-family: var(--font-display);
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.credit-row .credits-col-role {
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    font-weight: 400;
+    color: var(--text-secondary);
+    letter-spacing: 0.02em;
+}
+
+.credit-row .credits-col-desc {
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+    font-weight: 300;
+}
+
+.credit-row .credits-col-link a {
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    color: var(--purple-light);
+    letter-spacing: 0.03em;
+    transition: color 0.2s;
+}
+
+.credit-row .credits-col-link a:hover {
+    color: var(--text-primary);
+}
+
+@media (max-width: 900px) {
+    .credits-header-row {
+        display: none;
+    }
+
+    .credit-row {
+        grid-template-columns: 1fr;
+        gap: 6px;
+        padding: 20px 24px;
+    }
+
+    .credit-row .credits-col-name {
+        font-size: 1rem;
+    }
+
+    .credit-row .credits-col-role {
+        color: var(--purple-light);
+    }
+
+    .credit-row .credits-col-desc {
+        margin-top: 4px;
+    }
+
+    .credit-row .credits-col-link {
+        margin-top: 6px;
+    }
+}
+
 /* ---- TESTIMONIALS ---- */
 #testimonials {
     padding: var(--section-pad) 0;
