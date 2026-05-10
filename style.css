@@ -784,6 +784,123 @@ img {
     }
 }
 
+/* ---- AWARDS ---- */
+#awards {
+    padding: var(--section-pad) var(--side-pad);
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.awards-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.award-card {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    gap: 24px;
+    align-items: center;
+    background: var(--bg-surface);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 28px 32px;
+    transition: border-color 0.3s;
+}
+
+.award-card:hover {
+    border-color: var(--amber);
+}
+
+.award-icon {
+    color: var(--amber);
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 56px;
+    height: 56px;
+    background: var(--amber-dim);
+    border-radius: 50%;
+}
+
+.award-info {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.award-year {
+    font-family: var(--font-mono);
+    font-size: 0.65rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--amber);
+}
+
+.award-title {
+    font-family: var(--font-display);
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    letter-spacing: -0.01em;
+}
+
+.award-org {
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    color: var(--text-secondary);
+    letter-spacing: 0.03em;
+}
+
+.award-desc {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+    font-weight: 300;
+    margin-top: 6px;
+}
+
+.award-proof {
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    color: var(--amber);
+    letter-spacing: 0.03em;
+    padding: 8px 16px;
+    border: 1px solid var(--amber);
+    border-radius: 5px;
+    transition: all 0.2s ease;
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+.award-proof:hover {
+    background: var(--amber-dim);
+    color: var(--text-primary);
+}
+
+@media (max-width: 768px) {
+    .award-card {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 16px;
+    }
+
+    .award-icon {
+        margin: 0 auto;
+    }
+
+    .award-info {
+        align-items: center;
+    }
+
+    .award-proof {
+        margin: 0 auto;
+    }
+}
+
 /* ---- TESTIMONIALS ---- */
 #testimonials {
     padding: var(--section-pad) 0;
